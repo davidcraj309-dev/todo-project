@@ -1,0 +1,113 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: rgb(228, 228, 228);
+   margin: 0;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   color: black;
+ 
+}
+.app-container{
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0,0,1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+h1{
+    color:rgb(54, 44, 44);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.input-Container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+.input-Container  input[type = "text"]{
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid rgb(146, 142, 142);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline:none ;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-Container  input[type = "text"] :focus{
+    border-color:rgb(235, 20, 20);
+}
+.add-btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid rgb(4, 76, 175);
+    background-color: #036def;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: 1rem;
+    font-weight: 500;
+    transition:backround-color 0.2s ease-in ;
+}
+.add-btn:hover{
+    background-color: #0350af;;
+}
+.todo-List{
+ list-style-type:none ;
+ padding: 0;
+ margin: 0;
+ text-align: left;
+}
+.todo-List li {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: rgb(245, 249, 255);
+    border: 1px solid rgb(232, 235, 247);
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+    word-break: break-word;
+    transition: background-color 0.2s ease-in-out;
+}
+.todo-List li:hover {
+    background-color: rgb(226, 237, 251);
+}
+.todo-List li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.todo-List li completed{
+    background-color: #02152e;
+    border-color: aqua;
+
+}
+.delete-btn{
+    background-color: red;
+    border: none;
+    color:white ;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.delete-btn:hover{
+    background-color: rgb(222, 7, 7);
+}
+.todo-List:empty::after{
+    content: "No task added, yet";
+    display: block;
+    text-align: center;
+    color: #857777;
+    font-style: italic;
+}
